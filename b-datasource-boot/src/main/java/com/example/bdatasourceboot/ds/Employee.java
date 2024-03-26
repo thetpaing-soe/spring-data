@@ -13,11 +13,11 @@ import java.sql.Date;
 @AllArgsConstructor
 public class Employee {
 
-    private int id;
+    private Integer id;
     private String firstName;
     private String lastName;
     private String email;
     private String phoneNumber;
-    private Date startingDate;
+    private Date startDate;
     private double salary;
 }
