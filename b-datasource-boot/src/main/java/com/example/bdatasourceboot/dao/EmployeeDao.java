@@ -12,7 +12,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Map;
 
 @Component
 public class EmployeeDao {
@@ -123,6 +122,22 @@ public class EmployeeDao {
                 .getAsDouble();
     }
 
+    public class CustomRowCallBackHandler implements RowCallbackHandler {
+
+        private double total;
+        private int count;
+
+        @Override
+        public void processRow(ResultSet rs) throws SQLException {
+            total += rs.getDouble("salary");
+            count++;
+        }
+
+        public double avgSalary() {
+            return total / (double) count;
+        }
+    }
+
     public class CustomResultSetExtract implements ResultSetExtractor<Double> {
 
         @Override
@@ -136,22 +151,6 @@ public class EmployeeDao {
                 count++;
             }
 
-            return total / (double) count;
-        }
-    }
-
-    public class CustomRowCallBackHandler implements RowCallbackHandler {
-
-        private double total;
-        private int count;
-
-        @Override
-        public void processRow(ResultSet rs) throws SQLException {
-            total += rs.getDouble("salary");
-            count++;
-        }
-
-        public double avgSalary() {
             return total / (double) count;
         }
     }

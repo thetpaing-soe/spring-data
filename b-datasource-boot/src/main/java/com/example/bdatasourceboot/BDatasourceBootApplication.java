@@ -4,12 +4,9 @@ import com.example.bdatasourceboot.dao.EmployeeDao;
 import com.example.bdatasourceboot.dao.EmployeeJdbcClient;
 import com.example.bdatasourceboot.ds.Employee;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Profile;
 
 import java.sql.Date;
 
@@ -40,8 +37,27 @@ public class BDatasourceBootApplication implements CommandLineRunner {
         System.out.println("Find All Employees::");
         employeeJdbcClient.findAllEmployees().forEach(System.out::println);
 
-        System.out.println("Find Employee By id::");
-        System.out.println(employeeJdbcClient.findById(3));
+        System.out.println("Find Employee By Id::");
+        System.out.println(employeeJdbcClient.findEmployeeById(3).get());
+
+        System.out.println("Find Employee By FirstName and LastName::");
+        System.out.println(employeeJdbcClient.findEmployeeByFirstNameAndLastName("Thomas", "Hardy").get());
+
+        Employee employee = new Employee(
+                null,
+                "Thu Thu",
+                "Hnin Wai",
+                "thuthu@gmail.com",
+                "55-555-55",
+                Date.valueOf("2024-03-26"),
+                10000
+                );
+
+//        employeeJdbcClient.create(employee);
+//        employeeJdbcClient.updateEmployee(employee, 7);
+        employeeJdbcClient.deleteEmployee(5);
+        System.out.println();
+        employeeJdbcClient.findAllEmployees().forEach(System.out::println);
 
 //        employeeDao.listEmails().forEach(System.out::println);
 //        System.out.println();

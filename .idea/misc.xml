@@ -6,6 +6,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/b-datasource-boot/pom.xml" />
+        <option value="$PROJECT_DIR$/connection-transaction/pom.xml" />
+        <option value="$PROJECT_DIR$/c-connection-transaction/pom.xml" />
       </list>
     </option>
   </component>
