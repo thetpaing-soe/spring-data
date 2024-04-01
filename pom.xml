@@ -13,6 +13,7 @@
         <module>a-datasource-standalone</module>
         <module>templatemethod-pattern</module>
         <module>string-calculator</module>
+        <module>e-spring-data-jpa-java-se</module>
     </modules>
 
     <properties>

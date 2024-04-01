@@ -1,8 +1,9 @@
-package com.example.connectiontransaction.ds;
+package com.example.transactionrollbackpolicy.ds;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.sql.Date;
 

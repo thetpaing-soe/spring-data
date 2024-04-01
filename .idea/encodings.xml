@@ -5,6 +5,9 @@
     <file url="file://$PROJECT_DIR$/a-datasource-standalone/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/b-datasource-boot/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/c-connection-transaction/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/d-transaction-rollback-policy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/e-spring-data-jpa-java-se/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/e-spring-data-jpa-java-se/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/string-calculator/src/main/java" charset="UTF-8" />

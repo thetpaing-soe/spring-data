@@ -1,6 +1,6 @@
 package demo;
 
-import com.example.Calculator;
+import org.example.Calculator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

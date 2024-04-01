@@ -1,6 +1,6 @@
 package demo;
 
-import com.example.StringCalculator;
+import org.example.StringCalculator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
